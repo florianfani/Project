@@ -23,6 +23,7 @@ body {
   margin: auto;
   border: 5px solid black;
   overflow: hidden;
+  position:relative;
 }
 
 .carousel-slide{
@@ -31,7 +32,45 @@ body {
   height: 530px;
 }
 
+#prevBtn{
+  position:absolute;
+  top:45%;
+  z-index: 10;
+  left: 5%;
+  font-size: 30px;
+  color:white;
+  opacity: 0.7;
+  cursor: pointer;
 
+}
+
+#nextBtn{
+  position:absolute;
+  top:45%;
+  z-index: 10;
+  right: 5%;
+  font-size: 30px;
+  color:white;
+  opacity:0.7;
+  cursor: pointer;
+}
+
+#drinkhero{
+  width: 100%;
+  padding-top: 200px;
+}
+#drinktext{
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  color: rgb(85, 84, 84);
+}
+
+#drinktext h1 {
+  letter-spacing: 15px;
+  margin-bottom: 0px;
+  font-size: 55px;
+}
 .meh {
   text-align: center;
 }
@@ -96,7 +135,7 @@ body {
 .login-container{
   display: flex;
   justify-content: center;
-  margin-top: 92px;
+  margin-top: 170px;
 }
 
 .register-button{
