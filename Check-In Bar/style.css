@@ -18,23 +18,20 @@ body {
   
 }
 
-#drinkhero {
+.carousel-container{
+  width: 50%;
+  margin: auto;
+  border: 5px solid black;
+  overflow: hidden;
+}
+
+.carousel-slide{
+  display: flex;
   width: 100%;
-  background-image: url("img/qemkin4.jpg")  ;
-  height: 480px;
-  padding-top: 200px;
+  height: 530px;
 }
-#drinktext {
-  text-align: center;
-  width: 40%;
-  margin-left: 30%;
-  color: rgb(85, 84, 84);
-}
-#drinktext h1 {
-  letter-spacing: 15px;
-  margin-bottom: 0px;
-  font-size: 80px;
-}
+
+
 .meh {
   text-align: center;
 }
