@@ -109,7 +109,7 @@ body {
   background-color: white;
   margin-top: 20px;
   color: gray;
-  border: 1px #fbcc93;
+  border: 1px #fbcc93; 
 }
 
 #live-music button:hover {
@@ -146,5 +146,34 @@ body {
   color: white;
 }
 .register-button:hover{
+  background-color: #79253d;
+}
+
+
+.bookContainer{
+  display: flex;
+}
+
+.book{
+  margin-top: 325px;
+  margin-left: 250px;
+  color: wheat;
+}
+
+.bookForm{
+  margin-top: 200px;
+  margin-left: 500px;
+}
+
+#areaSelect{
+  margin-right: 110px;
+  margin-top: 20px;
+  width: 150px;
+  height: 35px; 
+  border: none; 
+  background-color: #1c2d42; 
+  color: white;
+}
+#areaSelect:hover{
   background-color: #79253d;
 }
