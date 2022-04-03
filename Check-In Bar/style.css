@@ -19,9 +19,9 @@ body {
 }
 
 .carousel-container{
-  width: 50%;
+  width: 49%;
   margin: auto;
-  border: 5px solid black;
+  
   overflow: hidden;
   position:relative;
 }
