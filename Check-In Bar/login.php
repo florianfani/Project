@@ -77,35 +77,35 @@
               <br>
               <p>Register</p>
               <div style="color:red" id="error-reg"></div>
-            <pre><input id="name" type="text" placeholder="First Name" style="width: 250px; height: 25px;" ></pre>
-            <pre><input id="surname" type="text" placeholder="Last Name" style="width: 250px; height: 25px;" ></pre>
-            <pre><input id="reg-email" type="email" placeholder="Email" style="width: 250px; height: 25px;"></pre>
-            <pre><input id="reg-password" type="password" placeholder="Password" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="name" name="name" type="text" placeholder="First Name" style="width: 250px; height: 25px;" ></pre>
+            <pre><input id="surname" name="surname"  type="text" placeholder="Last Name" style="width: 250px; height: 25px;" ></pre>
+            <pre><input id="reg-email" name="email" type="email" placeholder="Email" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="reg-password" name="password" type="password" placeholder="Password" style="width: 250px; height: 25px;"></pre>
             <pre><input id="reg-password-2" type="password" placeholder="Re-type Password" style="width: 250px; height: 25px;"></pre>
 
             <pre><input type="radio" name="gender" id="male"> <label for="male">Male</label> <input type="radio" name="gender" id="female"><label for="female">Female</label></pre>
 
             <label for="birthday">Birthday</label>
-            <input type="date" id="birthday">
+            <input type="date" id="birthday" name="birthday">
             <br>
             <br>
             
-            <label for="tel">Tel Number </label> <input type="tel" id="tel"> <br><br>
+            <label for="tel">Tel Number </label> <input type="tel" id="tel" name="tel"> <br><br>
 
          
            <pre><select style="width: 250px; height: 25px">
                 <option value="">Select a City</option>
-                <option value="">Ferizaj</option>
-                <option value="">Prishtine</option>
-                <option value="">Lipjan</option>
-                <option value="">Tuz</option>
-                <option value="">Podgorice</option>
-                <option value="">Qellapek</option>
+                <option value="Ferizaj">Ferizaj</option>
+                <option value="Prishtine">Prishtine</option>
+                <option value="Lipjan">Lipjan</option>
+                <option value="Tuz">Tuz</option>
+                <option value="Podgorice">Podgorice</option>
+                <option value="Qellapek">Qellapek</option>
 
             </select></pre>
 
             
-            <pre><input id="register" class="register-button" type="submit" value="Register"></pre>
+            <pre><input id="register" class="register-button" type="submit" value="Register" name="registerBtn"></pre>
             
         </form>
 
