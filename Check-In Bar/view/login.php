@@ -73,7 +73,7 @@
           </form>      
               
 
-            <form id="form-reg" style="width: 400px;background-color: white; text-align: center; border : 3px inset #1c2d42;">
+            <form action="login.php" method="post" id="form-reg" style="width: 400px;background-color: white; text-align: center; border : 3px inset #1c2d42;">
               <br>
               <p>Register</p>
               <div style="color:red" id="error-reg"></div>
@@ -83,7 +83,7 @@
             <pre><input id="reg-password" name="password" type="password" placeholder="Password" style="width: 250px; height: 25px;"></pre>
             <pre><input id="reg-password-2" type="password" placeholder="Re-type Password" style="width: 250px; height: 25px;"></pre>
 
-            <pre><input type="radio" name="gender" id="male"> <label for="male">Male</label> <input type="radio" name="gender" id="female"><label for="female">Female</label></pre>
+            <pre><input type="radio" name="gender" id="male" value="Male"> <label for="male">Male</label> <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label></pre>
 
             <label for="birthday">Birthday</label>
             <input type="date" id="birthday" name="birthday">
@@ -93,14 +93,14 @@
             <label for="tel">Tel Number </label> <input type="tel" id="tel" name="tel"> <br><br>
 
          
-           <pre><select style="width: 250px; height: 25px">
-                <option value="">Select a City</option>
-                <option value="Ferizaj">Ferizaj</option>
-                <option value="Prishtine">Prishtine</option>
-                <option value="Lipjan">Lipjan</option>
-                <option value="Tuz">Tuz</option>
-                <option value="Podgorice">Podgorice</option>
-                <option value="Qellapek">Qellapek</option>
+           <pre><select name="city" style="width: 250px; height: 25px">
+                <option name="city" value="#">Select a City</option>
+                <option name="city" value="Ferizaj">Ferizaj</option>
+                <option name="city" value="Prishtine">Prishtine</option>
+                <option name="city" value="Lipjan">Lipjan</option>
+                <option name="city" value="Tuz">Tuz</option>
+                <option name="city" value="Podgorice">Podgorice</option>
+                <option name="city" value="Qellapek">Qellapek</option>
 
             </select></pre>
 
@@ -109,6 +109,7 @@
             
         </form>
 
+       <?php require_once '../controller/userController.php'?>
 
     </main>  
 

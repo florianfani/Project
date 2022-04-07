@@ -26,15 +26,15 @@ class UserRepository{
         $sql = "INSERT INTO useri VALUES ('$id', '$name', '$surname', '$email', '$password', '$gender', '$birthday', '$tel', '$city')";
 
          if(mysqli_query($conn,$sql)){
-            echo "Query is executed successfuly!";
+           // echo "Query is executed successfuly!";
             }
              else{
-                echo "Error!";
+         //       echo "Error!";
          }
     }
 
 
 }
-    $ur = new UserRepository;
-    $ur->insertUser();
+    // $ur = new UserRepository;
+    // $ur->insertUser();
 ?>
