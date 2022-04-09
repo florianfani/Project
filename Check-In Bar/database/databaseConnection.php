@@ -22,7 +22,7 @@ class DatabaseConnection{
 
     
 
-    // $sql = "INSERT INTO useri VALUES ('AA100', 'Aurel', 'Berisha', 'aurel@hotmail.com', 'aurel123', 'Male', '07/05/1961', '049350944', 'Ferizaj')";
+    // $sql = "INSERT INTO book VALUES ('AA100', 'Aurel', 'Berisha', 'aurel@hotmail.com', 'aurel123', 'Male', '07/05/1961', '049350944', 'Ferizaj')";
 
     // if(mysqli_query($conn,$sql)){
     //     echo "Query is executed successfuly!";

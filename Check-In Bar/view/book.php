@@ -56,7 +56,7 @@
 
         <div class="bookForm">
 
-          <form style="width: 500px; background-color: white; text-align: center; border : 3px inset #1c2d42;">
+          <form action="book.php" method="post" style="width: 500px; background-color: white; text-align: center; border : 3px inset #1c2d42;">
           
             <img src="img/qemkin.jpg" style="width: 100px; height: 50px; margin-bottom: 10px;" alt="qemkin logo pic">
               <br> 
@@ -66,20 +66,21 @@
 
             <div style="color:red" id="error"></div>
 
-            <pre><input id="name" type="text" placeholder="Name" style="width: 250px; height: 25px;"></pre>
-            <pre><input id="tel" type="text" placeholder="Tel Number" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="name" type="text" placeholder="Name" name="bname" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="tel" type="text" placeholder="Tel Number" name="btel" style="width: 250px; height: 25px;"></pre>
             <pre>
-              <select name="" id="areaSelect">
-                <option value="">Select Area</option>
-                <option value="">A</option>
-                <option value="">B</option>
-                <option value="">C</option>
-                <option value="">D</option>
+              <select name="area" id="areaSelect">
+                <option name="area" value="#">Select Area</option>
+                <option name="area" value="A">A</option>
+                <option name="area" value="B">B</option>
+                <option name="area" value="C">C</option>
+                <option name="area" value="D">D</option>
               </select>
             </pre>
-            <pre><input id="book" class="register-button" type="submit" value="Book Now!"></pre>
-
-          </form>   
+            <pre><input id="book" class="register-button" type="submit" value="Book Now!" name="bookBtn"></pre>
+                <?php require_once '../controller/bookController.php'?> 
+          </form> 
+          
         </div>
     </div>
     <br><br>
