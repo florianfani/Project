@@ -15,7 +15,7 @@ class DatabaseConnection{
         return null;
     }
         else{
-         echo "Success";
+        // echo "Success";
          return $conn;
         }
     }

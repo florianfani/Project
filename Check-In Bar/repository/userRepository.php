@@ -34,6 +34,21 @@ class UserRepository{
     }
 
 
+    function getUserByEmail($email,$password){
+        $conn = $this->connection->startConnection();
+
+
+        $sql = "SELECT * FROM useri WHERE Email = '$email' and Password = '$password'";
+
+        if($statement = $conn->query($sql)){
+            $result = $statement->fetch_row();
+            return $result;
+        }
+        else{
+            return null;
+        }
+    }
+
 }
     // $ur = new UserRepository;
     // $ur->insertUser();

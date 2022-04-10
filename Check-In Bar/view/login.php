@@ -56,7 +56,7 @@
 
         
 
-        <form id="form" style="width: 400px; background-color: white; text-align: center; border : 3px inset #1c2d42;">
+        <form action="" method="post" id="form" style="width: 400px; background-color: white; text-align: center; border : 3px inset #1c2d42;">
           
             <img src="img/qemkin.jpg" style="width: 100px; height: 50px; margin-bottom: 10px;" alt="qemkin logo pic">
               <br> 
@@ -66,10 +66,10 @@
 
             <div style="color:red" id="error"></div>
 
-            <pre><input id="email" type="email" placeholder="Email" style="width: 250px; height: 25px;"></pre>
-            <pre><input id="password" type="password" placeholder="Password" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="email" type="email" placeholder="Email" name="email" style="width: 250px; height: 25px;"></pre>
+            <pre><input id="password" type="password" placeholder="Password" name="password" style="width: 250px; height: 25px;"></pre>
             <pre><input id="login" class="register-button" type="submit" value="Log In" name="loginBtn"></pre>
-
+            <?php require_once '../controller/loginController.php'?>
           </form>      
               
 

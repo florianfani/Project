@@ -52,6 +52,9 @@ class User{
         return $this->city;
     }
 
+    function __toString(){
+        return "User: ".$this->name." - ".$this->surname." - ".$this->email;
+    }
 
 
 }
