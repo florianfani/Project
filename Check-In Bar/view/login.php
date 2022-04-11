@@ -107,6 +107,7 @@
             
             <pre><input id="register" class="register-button" type="submit" value="Register" name="registerBtn"></pre>
                   <?php require_once '../controller/userController.php'?>
+               
         </form>
 
       

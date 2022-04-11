@@ -49,6 +49,21 @@ class UserRepository{
         }
     }
 
+    function checkRegister($email){
+        $conn = $this->connection->startConnection();
+
+        $sql = "SELECT * FROM useri WHERE Email = '$email'";
+
+        if($statement = $conn->query($sql)){
+            $result = $statement->fetch_row();
+            return $result;
+        }
+        else{
+            return null;
+        }
+
+    }
+
 }
     // $ur = new UserRepository;
     // $ur->insertUser();

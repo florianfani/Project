@@ -10,26 +10,49 @@ if(isset($_POST['registerBtn'])){
         echo "Fill all fields!";
 
     }
-
-    else{
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
+      
+    elseif(isset($_POST['registerBtn'])){
             $email = $_POST['email'];
-            $password = $_POST['password'];
-            $gender = $_POST['gender'];
-            $birthday = $_POST['birthday'];
-            $tel = $_POST['tel'];
-            $city = $_POST['city'];
-            $id = rand(1,999).$name;
+       
+               $userRepository = new UserRepository;
+       
+               $user = $userRepository->checkRegister($email);
+       
+       
+               if(empty($user)){
+                $name = $_POST['name'];
+                $surname = $_POST['surname'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $gender = $_POST['gender'];
+                $birthday = $_POST['birthday'];
+                $tel = $_POST['tel'];
+                $city = $_POST['city'];
+                $id = rand(1,999).$name;
+    
+    
+                $user = new User($id,$name,$surname,$email,$password,$gender,$birthday,$tel,$city);
+    
+                $userRepository = new UserRepository;
+    
+                
+                $userRepository->insertUser($user);
 
+                  echo "Registered Successfuly!";
+               }
+               else{
+                    echo "User already exists";
+               }
+       
+              
+       
+           }
+    
 
-            $user = new User($id,$name,$surname,$email,$password,$gender,$birthday,$tel,$city);
+    // else{
+            
 
-            $userRepository = new UserRepository;
-
-            $userRepository->insertUser($user);
-
-    }
+    // }
 }
 
 
