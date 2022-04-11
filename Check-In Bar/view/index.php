@@ -108,7 +108,8 @@
 <div id="live-music">
 	<h1> Live Music, Live Events</h1>
 	<p> Book your table now.  </p>
-	<button style="width:200px;height:70px;"><a href="book.html">BOOK</a></button>
+
+  <a href="book.php"><button style="width:200px;height:70px;">BOOK</button></a>
 </div>
 <br> <br>
 <div class="showcasedrink">
