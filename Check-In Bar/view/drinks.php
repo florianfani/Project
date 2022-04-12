@@ -1,3 +1,24 @@
+<?php
+session_start();
+$hide="";
+if(!isset($_SESSION['email'])){
+    header("location:login.php");
+}
+else{
+    if(isset($_SESSION['role'])){
+      $role = $_SESSION['role'];
+      if($role == $user->getRole()){
+        $hide = "hide";
+      }
+    }
+}
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +35,9 @@
     height: 530px;
   
   }
+  .hide{
+            display:none;
+          }
 </style>
 
   </head>
@@ -33,7 +57,8 @@
         <a class="nav-link" href="book.php">Book</a>
       </div>
       <div class="navbar-nav navbar-right">
-      	<a class="nav-link" href="login.php">Login</a>
+      <a class="nav-link" href="dashboard.php">Dashboard</a>
+        <a class="nav-link <?php echo $hide?>" href="logout.php">Logout</a>
         
       </div>
     </div>

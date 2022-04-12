@@ -16,13 +16,18 @@ if(isset($_POST['loginBtn'])){
 
         $user = $userRepository->getUserByEmail($email,$password);
 
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['role'] = $role;
+        header("location:../view/index.php");
+
 
         if(empty($user)){
             echo "Email or Password is Incorrect!";
         }
-        else{
-            header("location:../view/index.php");
-        }
+        // else{
+            
+        // }
 
 
     }

@@ -27,10 +27,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav navbar-center">
-        <a class="nav-link"  href="index.php">Home</a>
-        <a class="nav-link" href="drinks.php">Drinks</a>
-        <a class="nav-link" href="about.php">About</a>
-        <a class="nav-link" href="book.php">Book</a>
+        
       </div>
       <div class="navbar-nav navbar-right">
       	<a class="nav-link active" aria-current="page" href="#">Login</a>

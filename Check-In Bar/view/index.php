@@ -1,3 +1,24 @@
+<?php
+session_start();
+$hide="";
+if(!isset($_SESSION['email'])){
+    header("location:login.php");
+}
+else{
+    if(isset($_SESSION['role'])){
+      $role = $_SESSION['role'];
+      if($role == $user->getRole()){
+        $hide = "hide";
+      }
+    }
+}
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,6 +28,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Check-in Bar</title>
+        <style>
+          .hide{
+            display:none;
+          }
+        </style>
   </head>
   <body>
     <div id="blla"></div>
@@ -24,7 +50,8 @@
         <a class="nav-link" href="book.php">Book</a>
       </div>
       <div class="navbar-nav navbar-right">
-      	<a class="nav-link" href="login.php">Login</a>
+        <a class="nav-link" href="dashboard.php">Dashboard</a>
+        <a class="nav-link <?php echo $hide?>"  href="logout.php">Logout</a>
         
       </div>
     </div>
