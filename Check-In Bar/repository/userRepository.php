@@ -22,8 +22,9 @@ class UserRepository{
         $birthday = $user->getBirthday();
         $tel = $user->getTel();
         $city = $user->getCity();
+        $role = $user->getRole();
           
-        $sql = "INSERT INTO useri VALUES ('$id', '$name', '$surname', '$email', '$password', '$gender', '$birthday', '$tel', '$city')";
+        $sql = "INSERT INTO useri VALUES ('$id', '$name', '$surname', '$email', '$password', '$gender', '$birthday', '$tel', '$city', '$role')";
 
          if(mysqli_query($conn,$sql)){
            // echo "Query is executed successfuly!";

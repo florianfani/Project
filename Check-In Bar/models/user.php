@@ -10,8 +10,9 @@ class User{
     private $birthday;
     private $tel;
     private $city;
+    private $role;
 
-    function __construct($id,$name,$surname,$email,$password,$gender,$birthday,$tel,$city){
+    function __construct($id,$name,$surname,$email,$password,$gender,$birthday,$tel,$city,$role){
         $this->id = $id;
         $this->name = $name;
         $this->surname = $surname;
@@ -21,6 +22,7 @@ class User{
         $this->birthday = $birthday;
         $this->tel = $tel;
         $this->city = $city;
+        $this->role = $role;
 
     }
     
@@ -51,9 +53,12 @@ class User{
     function getCity(){
         return $this->city;
     }
+    function getRole(){
+        return $this->role;
+    }
 
     function __toString(){
-        return "User: ".$this->name." - ".$this->surname." - ".$this->email;
+        return "User: ".$this->name." - ".$this->surname." - ".$this->email. " - ".$this->role;
     }
 
 
