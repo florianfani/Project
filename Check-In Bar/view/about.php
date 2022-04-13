@@ -72,7 +72,11 @@ else{
 </div>
 <div class="meh">
 	<h3>Who Are We?</h3>
+    <?php 
+   
+     echo "Role is: ".$_SESSION['role'];
     
+    ?>
 </div>
   
 
