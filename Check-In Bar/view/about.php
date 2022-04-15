@@ -7,7 +7,8 @@ if(!isset($_SESSION['email'])){
 else{
     if(isset($_SESSION['role'])){
       $role = $_SESSION['role'];
-      if($role == $user->getRole()){
+      if($role == 'User'){
+        //header("location:about.php");
         $hide = "hide";
       }
     }
@@ -15,6 +16,8 @@ else{
 
 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -56,8 +59,8 @@ else{
         <a class="nav-link" href="book.php">Book</a>
       </div>
       <div class="navbar-nav navbar-right">
-        <a class="nav-link" href="dashboard.php">Dashboard</a>
-      	<a class="nav-link <?php echo $hide?>" href="logout.php">Logout</a>
+      <a class="nav-link <?php echo $hide ?>"   href="dashboard.php">Dashboard</a>
+      	<a class="nav-link" href="logout.php">Logout</a>
         
       </div>
     </div>

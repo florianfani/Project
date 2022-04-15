@@ -76,20 +76,20 @@ class UserRepository{
         }
     }
 
-    function checkRole($email){
-        $conn = $this->connection->startConnection();
+    // function checkRole($email){
+    //     $conn = $this->connection->startConnection();
 
 
-        $sql = "SELECT Role FROM useri WHERE Email = '$email'";
+    //     $sql = "SELECT Role FROM useri WHERE Email = '$email'";
 
-        if($statement = $conn->query($sql)){
-            $result = $statement->fetch_row();
-            return $result;
-        }
-        else{
-            return null;
-        }
-    }
+    //     if($statement = $conn->query($sql)){
+    //         $result = $statement->fetch_row();
+    //         return $result;
+    //     }
+    //     else{
+    //         return null;
+    //     }
+    // }
 
     function checkRegister($email){
         $conn = $this->connection->startConnection();
@@ -104,6 +104,43 @@ class UserRepository{
             return null;
         }
 
+    }
+
+    function check_email($email){
+        $dbC = new DatabaseConnection;
+        $conn = $dbC->startConnection();
+        $select_email = "SELECT * FROM useri WHERE Email = '$email'";
+        $result = mysqli_query($conn, $select_email);
+        if(mysqli_num_rows($result) > 0){
+            echo '';
+            return true;
+
+        }else{
+
+            return false;
+        }
+    }
+    function check_password($password){
+        $dbC = new DatabaseConnection;
+        $conn = $dbC->startConnection();
+        $select_password = "SELECT * FROM useri WHERE Password = '$password'";
+        $result = mysqli_query($conn, $select_password);
+        if(mysqli_num_rows($result) > 0){
+            echo '';
+            return true;
+
+        }else{
+
+            return false;
+        }
+    }
+    function get_role($email){
+        $dbC = new DatabaseConnection;
+        $conn = $dbC->startConnection();
+        $select_role = "SELECT Role FROM useri where Email = '$email'";
+        $result = mysqli_query($conn, $select_role);
+        $row = mysqli_fetch_row($result);
+        return $row[0];
     }
 
 }

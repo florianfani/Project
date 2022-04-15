@@ -1,3 +1,24 @@
+<?php
+session_start();
+$hide="";
+if(!isset($_SESSION['email'])){
+    header("location:login.php");
+}
+else{
+    if(isset($_SESSION['role'])){
+      $role = $_SESSION['role'];
+      if($role == 'User'){
+        //header("location:about.php");
+        $hide = "hide";
+      }
+    }
+}
+
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,15 +40,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav navbar-center">
-        
+      <a class="nav-link"  href="index.php">Home</a>
+        <a class="nav-link"  href="drinks.php">Drinks</a>
+        <a class="nav-link" href="about.php">About</a>
+        <a class="nav-link" href="book.php">Book</a>
       </div>
       <div class="navbar-nav navbar-right">
-      	<a class="nav-link active" aria-current="page" href="#">Login</a>
-        
+      	<a class="nav-link active"  href="logout.php">Logout</a>
       </div>
     </div>
   </div>
 </nav>
+
+
+
 
 
 
