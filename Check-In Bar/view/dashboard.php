@@ -29,6 +29,13 @@ else{
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Dashboard</title>
 
+
+    <style>
+    
+      .hide{
+            display:none;
+          }
+    </style>
   </head>
   <body>
     <div id="blla"><p></p></div>
@@ -40,21 +47,39 @@ else{
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav navbar-center">
-      <a class="nav-link"  href="index.php">Home</a>
-        <a class="nav-link"  href="drinks.php">Drinks</a>
+        <a class="nav-link"  href="index.php">Home</a>
+        <a class="nav-link" href="drinks.php">Drinks</a>
         <a class="nav-link" href="about.php">About</a>
-        <a class="nav-link" href="book.php">Book</a>
+        <a class="nav-link"href="book.php">Book</a>
       </div>
       <div class="navbar-nav navbar-right">
-      	<a class="nav-link active"  href="logout.php">Logout</a>
+      
+      	<a class="nav-link" href="logout.php">Logout</a>
+        
       </div>
     </div>
   </div>
 </nav>
 
 
+    
 
 
+
+    <div class="dashContainer" style="width:25%; height:100%; border:1px solid black;background-color:lightgrey">
+        <div class="dash" style="margin-bottom:450px; margin-top:400px">
+          <br> 
+            <a href="mngUser.php"><button style="width:475px;height:70px;color:#1c2d42;font-size:25px">Users</button></a>
+            <br>
+            <a href="mngBook.php"><button style="width:475px;height:70px;color:#1c2d42;font-size:25px">Bookings</button></a>
+            <br>
+        </div>
+
+        
+    </div>
+    <br><br>
+
+            
 
 
     </body>
