@@ -5,7 +5,8 @@ if(isset($_SESSION['email'])){
 }
 include_once '../repository/userRepository.php';
 
-$chF = new UserRepository;
+$userRepository = new UserRepository;
+
 $emailPasswordError = "";
 
 if(isset($_POST['loginBtn'])){
@@ -15,23 +16,27 @@ if(isset($_POST['loginBtn'])){
 
     }
     else{
-        
         $email = $_POST['email'];
         $password = $_POST['password'];
-        if($chF->check_email($email) && $chF->check_password($password) && $chF->get_role($email) === 'User'){ 
+        $user = $userRepository->getUserByEmail($email,$password);
+        if(empty($user)){
+            echo "Email or Password is Incorrect!";
+        }
+
+        elseif($userRepository->getUserByEmail($email,$password) && $userRepository->get_role($email) === 'User'){ 
             $_SESSION['email'] = $email; 
             $_SESSION['role'] = 'User';
             //header("location:../view/index.php");
-        }elseif($chF->check_email($email) && $chF->check_password($password) && $chF->get_role($email) === 'Admin'){
+        }elseif($userRepository->getUserByEmail($email,$password) && $userRepository->get_role($email) === 'Admin'){
             $_SESSION['email'] = $email;
             $_SESSION['role'] = 'Admin';
            // header("location:../view/dashboard.php");
 
         }
-        else{
-          echo $emailPasswordError="Email or Password is Incorrect!";
+        // else{
+        //   echo $emailPasswordError="Email or Password is Incorrect!";
 
-        }
+        // }
 
         
 
@@ -61,11 +66,11 @@ if(isset($_POST['loginBtn'])){
 //         if($chF->check_email($email) && $chF->check_password($password) && $chF->get_role($email) === 'user'){ 
 //             $_SESSION['email'] = $email; 
 //             $_SESSION['user'] = 'user';
-//             echo '<script> location.replace("http://localhost/InxhineriWeb-it-Projekti-/view/home.php%22); </script>';
+//             
 //         }else if($chF->check_email($email) && $chF->check_password($password) && $chF->get_role($email) === 'admin'){
 //             $_SESSION['email'] = $email; 
 //             $_SESSION['admin'] = 'admin';
-//             echo '<script> location.replace("http://localhost/InxhineriWeb-it-Projekti-/view/admin/posts.php%22); </script>';
+//           
 
 //         }
 //         else{
