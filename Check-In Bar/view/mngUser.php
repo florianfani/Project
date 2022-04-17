@@ -109,7 +109,7 @@ else{
                              <td valign="middle"><?php echo $row["Tel"];?></td>
                              <td valign="middle"><?php echo $row["City"];?></td>
                              <td valign="middle"><?php echo $row["Role"];?></td>
-                             <td valign="middle"><a href="../controller/deleteUser.php" id="<?php echo $row["Email"];?>" class="delete-user button" onclick="return confirm('Are you sure you want to delete this User')"><button style="border:none; background-color:#79253d;color:lightgray">Delete</button></a></td>                            
+                             <td valign="middle"><a href="../controller/deleteUser.php? id=<?php echo $row["Id"];?>" class="delete-user button" onclick="return confirm('Are you sure you want to delete this User')">Delete</a></td>                            
                          </tr>
                                   
                         <?php }?>
